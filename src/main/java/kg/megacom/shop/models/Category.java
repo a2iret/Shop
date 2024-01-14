@@ -3,14 +3,20 @@ package kg.megacom.shop.models;
 import java.util.Date;
 
 public class Category {
+    private int id;
     private String name;
     private boolean isActive;
     private Date createdDate;
 
-    public Category(String name, boolean isActive) {
+    public Category(int id, String name, boolean isActive) {
+        this.id = id;
         this.name = name;
         this.isActive = isActive;
         this.createdDate = new Date();
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName(){

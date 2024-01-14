@@ -12,4 +12,6 @@ public interface CategoryService {
     boolean createCategory(Category category);
 
     List<Category> getCategories();
+
+    Category findCategoryById(int id);
 }

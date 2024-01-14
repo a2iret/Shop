@@ -7,4 +7,6 @@ module kg.megacom.shop {
     exports kg.megacom.shop;
     exports kg.megacom.shop.controllers;
     opens kg.megacom.shop.controllers to javafx.fxml;
+    exports kg.megacom.shop.models;
+    opens kg.megacom.shop.models to javafx.fxml;
 }

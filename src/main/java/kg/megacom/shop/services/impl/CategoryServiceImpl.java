@@ -11,8 +11,8 @@ public class CategoryServiceImpl implements CategoryService {
     private List<Category> categories = new ArrayList<>();
 
     public CategoryServiceImpl() {
-        categories.add(new Category("Milks", true));
-        categories.add(new Category("Sneaks", true));
+        categories.add(new Category(1,"dairy", true));
+        categories.add(new Category(2, "Sneaks", true));
     }
 
     @Override
@@ -23,5 +23,14 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<Category> getCategories() {
         return categories;
+    }
+
+    @Override
+    public Category findCategoryById(int id) {
+        for (Category category:categories) {
+            if (category.getId() == id)
+                return category;
+        }
+        return null;
     }
 }
